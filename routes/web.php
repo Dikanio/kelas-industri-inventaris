@@ -19,5 +19,6 @@ Route::get('/login', function () {
 });
 
 Route::controller(AssetController::class)->group(function () {
-    Route::get('/', 'index');
+    Route::get('/', 'index')->name('asset.index');
+    Route::post('/', 'store')->name('asset.store');
 });
